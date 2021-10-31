@@ -5,19 +5,13 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
-const NotFound = () => (
+const Services = () => (
   <Layout>
-    <SEO title="Not Found" />
+    <SEO title="Services" />
     <p className="text-sadi-blue-600 text-center text-2xl font-bold">
-      Page Not Found 👋
+      Welcome to your new Services.
     </p>
-    <Link
-      to="/"
-      className="font-semibold text-center p-2 rounded-sm bg-sadi-blue-700"
-    >
-      Cliquer ici pour à la Page D'Accueil
-    </Link>
   </Layout>
 )
 
-export default NotFound
+export default Services

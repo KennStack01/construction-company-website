@@ -1,71 +1,103 @@
+import React from "react"
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React, { useState } from "react"
+import { useState } from "react"
+import cn from "classnames"
+import { CgMenuCheese, CgClose } from "react-icons/cg"
+import { StaticImage } from "gatsby-plugin-image"
 
-function Header({ siteTitle }) {
-  const [isExpanded, toggleExpansion] = useState(false)
+const activeLinkStyles = {
+  borderBottomWidth: "thick",
+  borderColor: "#E2DF00",
+  cursor: "pointer",
+  marginBottom: "1px",
+}
+
+export default function Header() {
+  const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false)
 
   return (
-    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-      <div className="flex items-center flex-shrink-0 mr-6 text-white">
-        <span className="text-xl font-semibold tracking-tight">
-          {siteTitle}
-        </span>
-      </div>
-      <div className="block lg:hidden">
+    <header className="sticky top-0 z-50 w-full text-back-color-600 bg-white shadow-sm p-2">
+      <div className="flex flex-row justify-between mx-2 md:mx-4">
+        <div className="flex items-center">
+          <Link to="/">
+            <div style={{ maxWidth: `120px`, marginBottom: `1.45rem` }}>
+              <StaticImage src="../images/sadi-logo.png" alt="SADI SARL Logo" />
+            </div>
+          </Link>
+        </div>
+
         <button
-          onClick={() => toggleExpansion(!isExpanded)}
-          className="flex items-center px-3 py-2 text-white border border-white rounded hover:text-white hover:border-white"
+          className="items-center block px-3 py-2 my-auto  border rounded lg:hidden"
+          onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)}
         >
-          <svg
-            className="w-3 h-3 fill-current"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
+          {mobileMenuIsOpen ? <CgClose /> : <CgMenuCheese />}
         </button>
-      </div>
-      <div
-        className={`${
-          isExpanded ? `block` : `hidden`
-        } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
-      >
-        <div className="text-sm lg:flex-grow">
-          <Link
-            to={`/`}
-            href="#responsive-header"
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
+
+        <div className="my-auto hidden lg:flex flex-row justify-between">
+          <ul
+            className={cn(
+              // "sm:grid grid-cols-2 my-auto md:mt-2 z-10 hidden lg:flex lg:flex-row lg:items-center md:justify-center text-sm w-full md:w-auto",
+              "flex flex-row items-center justify-center text-md mt-2"
+              // mobileMenuIsOpen ? `block` : `hidden`
+            )}
           >
-            Home
-          </Link>
-          <Link
-            to={`/page-2`}
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
-          >
-            page 2
-          </Link>
+            {[
+              { title: "Accueil", route: "/" },
+              { title: "Services", route: "/services" },
+              { title: "Réalisations", route: "/realisations" },
+              { title: "Actualités", route: "/actu" },
+            ].map(({ route, title }) => (
+              <li
+                className="mt-3 md:mt-0 md:ml-6 font-bold hover:bg-gray-100 p-2 my-2 mx-1 rounded-sm  transition-all duration-300 ease-linear"
+                key={title}
+                activeStyle={activeLinkStyles}
+                activeClassName="active"
+              >
+                <Link to={route}>
+                  <h5 className="block">{title}</h5>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div>
-          <a
-            href="#download"
-            className="inline-block px-4 py-2 mt-4 text-sm leading-none text-white border border-white rounded hover:border-transparent hover:text-black hover:bg-white lg:mt-0"
+        <div className="hidden lg:flex flex-row text-xs font-bold">
+          {/* <UserAuthButtons /> */}
+        </div>
+
+        <div
+          className={
+            mobileMenuIsOpen
+              ? "absolute z-20 mt-10 flex flex-col lg:hidden bg-white mx-auto w-full py-3 px-2 text-sm"
+              : "hidden"
+          }
+        >
+          <ul
+            className={
+              mobileMenuIsOpen
+                ? `grid grid-cols-2 place-content-center`
+                : `hidden`
+            }
           >
-            Download
-          </a>
+            {[
+              { title: "Accueil", route: "/" },
+              { title: "Services", route: "/services" },
+              { title: "Réalisations", route: "/realisations" },
+              { title: "Actualités", route: "/actu" },
+            ].map(({ route, title }) => (
+              <li
+                className="mt-3 md:mt-0 md:ml-6 font-bold hover:bg-gray-100 p-2 my-2 mx-1 rounded-sm  transition-all duration-300 ease-linear"
+                key={title}
+                activeStyle={activeLinkStyles}
+                activeClassName="active"
+              >
+                <Link to={route}>
+                  <h5 className="block">{title}</h5>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-    </nav>
+    </header>
   )
 }
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
