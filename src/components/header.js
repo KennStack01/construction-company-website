@@ -17,7 +17,7 @@ export default function Header() {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full text-back-color-600 bg-white shadow-sm p-2">
+    <header className="sticky top-0 z-50 w-full text-back-color-600 bg-white shadow-sm p-0">
       <div className="flex flex-row justify-between mx-2 md:mx-4">
         <div className="flex items-center my-auto">
           <Link to="/">

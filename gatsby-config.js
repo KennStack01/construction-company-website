@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `SADI SARL`,
@@ -35,5 +39,12 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
     "gatsby-plugin-postcss",
+    {
+      resolve: "gatsby-source-graphcms",
+      options: {
+        endpoint: process.env.GATSBY_GRAPHCMS_ENDPOINT,
+        token: process.env.GATSBY_GRAPHCMS_TOKEN,
+      },
+    },
   ],
 }

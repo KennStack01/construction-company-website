@@ -1,0 +1,38 @@
+fragment PageAccueilBanner on PageAccueilBanner {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  greatWelcomeText
+  welcomeTextDescription
+  createdBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  updatedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  publishedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  imageBackground {
+    ... on Asset {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+      stage
+    }
+  }
+}
