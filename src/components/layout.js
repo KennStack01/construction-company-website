@@ -1,6 +1,6 @@
 import React from "react"
 import Footer from "./Footer"
-import Header from "./Header"
+import Header from "./header"
 import ContactBarInfo from "./ContactBarInfo"
 
 export default function Layout(props) {
