@@ -5,7 +5,7 @@ import ContactBarInfo from "./ContactBarInfo"
 
 export default function Layout(props) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <div className="layout flex flex-col items-center justify-center min-h-screen">
       {/* <Header /> */}
 
       <div className="w-full hidden md:block">

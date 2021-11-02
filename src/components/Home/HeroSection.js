@@ -25,7 +25,7 @@ const HeroSection = () => {
   return (
     <div className="mt-0 w-full text-white">
       <div className="flex flex-col absolute">
-        <h1 className="text-4xl md:text-7xl font-bold z-40 mt-14 md:mt-16 ml-3 md:ml-10 md:w-1/3">
+        <h1 className="text-4xl sm:text-lg md:text-4xl lg:text-7xl  font-bold z-40 mt-14 md:mt-16 ml-3 md:ml-10 md:w-1/3">
           <ReactTypingEffect
             text={[greatWelcomeText, "Ensemble, nous changeons le monde"]}
             speed={50}
@@ -39,13 +39,13 @@ const HeroSection = () => {
           {welcomeTextDescription}
         </p>
 
-        <Link
+        {/* <Link
           to="/contact"
           className="hidden md:flex flex-row justify-center bg-sadi-blue-500 hover:bg-sadi-blue-400 text-xl text-white font-semibold p-2 rounded-md z-40 justify-self-start mx-auto"
         >
           <RiPhoneFill className="my-auto text-3xl mx-1" />
           <h5 className="my-auto mx-1">Contactez-nous</h5>
-        </Link>
+        </Link> */}
       </div>
 
       <img

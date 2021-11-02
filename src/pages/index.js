@@ -14,9 +14,9 @@ const IndexPage = () => (
 
     <Link
       to="/contact"
-      className="flex flex-row my-8 mx-40 md:hidden justify-center text-center bg-sadi-blue-500 hover:bg-sadi-blue-400 text-md text-white font-semibold p-1 rounded-md"
+      className="flex flex-row my-8 mx-24 md:mx-96 justify-center text-center bg-sadi-blue-500 hover:bg-sadi-blue-400 text-sm md:text-xl text-white font-semibold p-2 rounded-md"
     >
-      <RiPhoneFill className="my-auto text-3xl mx-1" />
+      <RiPhoneFill className="my-auto text-2xl md:text-3xl mx-1" />
       <h5 className="my-auto mx-1">Contactez-nous</h5>
     </Link>
     <Mission />
