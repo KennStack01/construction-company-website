@@ -78,13 +78,22 @@ export default function Header() {
             >
               <h5 className="block">Actualités</h5>
             </Link>
+
+            <Link
+              to="/contact"
+              activeStyle={activeLinkStyles}
+              activeClassName="active"
+              className="font-bold hover:bg-gray-100 p-2 my-2 mx-1 rounded-sm  transition-all duration-300 ease-linear"
+            >
+              <h5 className="block">Contact</h5>
+            </Link>
           </div>
         </div>
 
         <div
           className={
             mobileMenuIsOpen
-              ? "absolute z-20 mt-16 flex flex-col lg:hidden bg-white mx-auto w-full py-3 px-2 text-sm"
+              ? "absolute z-20 mt-12 md:mt-16 flex flex-col lg:hidden bg-white mx-auto w-full py-3 px-2 text-sm"
               : "hidden"
           }
         >
@@ -126,6 +135,14 @@ export default function Header() {
               className="font-bold hover:bg-gray-100 p-2 my-2 mx-1 rounded-sm  transition-all duration-300 ease-linear"
             >
               <h5 className="block">Actualités</h5>
+            </Link>
+            <Link
+              to="/contact"
+              activeStyle={activeLinkStyles}
+              activeClassName="active"
+              className="font-bold hover:bg-gray-100 p-2 my-2 mx-1 rounded-sm  transition-all duration-300 ease-linear"
+            >
+              <h5 className="block">Contact</h5>
             </Link>
           </div>
         </div>

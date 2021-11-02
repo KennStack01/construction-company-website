@@ -8,10 +8,12 @@ export default function Layout(props) {
     <div className="flex flex-col items-center justify-center min-h-screen">
       {/* <Header /> */}
 
-      <ContactBarInfo />
+      <div className="w-full hidden md:block">
+        <ContactBarInfo />
+      </div>
       <Header />
 
-      <main className="relative flex-1 lg:container px-4 py-3 mx-auto md:px-0 md:py-0 overflow-x-auto overflow-auto">
+      <main className="relative flex-1 lg:container p-0 mx-auto overflow-x-auto overflow-auto">
         {props.children}
       </main>
 
