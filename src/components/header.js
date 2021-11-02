@@ -39,7 +39,7 @@ export default function Header() {
           <div
             className={cn(
               // "sm:grid grid-cols-2 my-auto md:mt-2 z-10 hidden lg:flex lg:flex-row lg:items-center md:justify-center text-sm w-full md:w-auto",
-              "flex flex-row items-center justify-center text-md text-sadi-blue-600 mt-2"
+              "flex flex-row items-center justify-center text-md text-sadi-blue-600"
               // mobileMenuIsOpen ? `block` : `hidden`
             )}
           >
