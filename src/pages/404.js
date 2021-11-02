@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 const NotFound = () => (
   <Layout>
     <SEO title="Not Found" />
-    <div className="flex flex-col">
+    <div className="flex flex-col my-10">
       <p className="text-sadi-blue-600 text-center text-2xl font-bold">
         Page Not Found 👋
       </p>

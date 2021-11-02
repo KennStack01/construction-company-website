@@ -6,7 +6,7 @@ import { RiPhoneFill } from "react-icons/ri"
 const HeroSection = () => {
   const data = useStaticQuery(graphql`
     query {
-      graphCmsPageAccueilBanner {
+      graphCmsPageBanner {
         greatWelcomeText
         welcomeTextDescription
         imageBackground {
@@ -17,10 +17,9 @@ const HeroSection = () => {
     }
   `)
 
-  const image = data.graphCmsPageAccueilBanner.imageBackground.url
-  const greatWelcomeText = data.graphCmsPageAccueilBanner.greatWelcomeText
-  const welcomeTextDescription =
-    data.graphCmsPageAccueilBanner.welcomeTextDescription
+  const image = data.graphCmsPageBanner.imageBackground.url
+  const greatWelcomeText = data.graphCmsPageBanner.greatWelcomeText
+  const welcomeTextDescription = data.graphCmsPageBanner.welcomeTextDescription
 
   return (
     <div className="mt-0 w-full text-white">
