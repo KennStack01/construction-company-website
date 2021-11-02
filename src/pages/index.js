@@ -1,28 +1,25 @@
 import React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
+import { RiPhoneFill } from "react-icons/ri"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeroSection from "../components/Home/HeroSection"
+import Mission from "../components/Home/Mission"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
 
     <HeroSection />
-    <p className="text-sadi-blue-600 text-center text-2xl font-bold">
-      Welcome to your new Gatsby site.
-    </p>
-    <div
-      style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}
-      className="mx-auto"
+
+    <Link
+      to="/contact"
+      className="flex flex-row my-8 mx-40 md:hidden justify-center text-center bg-sadi-blue-500 hover:bg-sadi-blue-400 text-md text-white font-semibold p-1 rounded-md"
     >
-      <StaticImage
-        src="../images/gatsby-astronaut.png"
-        alt="gatsby astronaut"
-      />
-    </div>
+      <RiPhoneFill className="my-auto text-3xl mx-1" />
+      <h5 className="my-auto mx-1">Contactez-nous</h5>
+    </Link>
+    <Mission />
   </Layout>
 )
 
