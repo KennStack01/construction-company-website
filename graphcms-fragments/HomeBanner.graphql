@@ -1,4 +1,4 @@
-fragment PageBanner on PageBanner {
+fragment HomeBanner on HomeBanner {
   stage
   remoteId: id
   createdAt
