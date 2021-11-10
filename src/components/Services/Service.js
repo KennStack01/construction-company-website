@@ -4,7 +4,7 @@ import { BiRightArrowAlt } from "react-icons/bi"
 
 const Service = ({ title, description, slug }) => {
   return (
-    <div className="flex flex-col items-center text-gray-800 border border-l-4 border-sadi-blue-300 bg-white p-2 px-4 rounded shadow-sm hover:shadow mx-3 md:mx-5 mb-8">
+    <div className="flex flex-col items-center text-gray-800 border border-l-4 border-sadi-blue-300 bg-white p-2 px-4 rounded shadow-sm hover:shadow-lg mx-3 md:mx-5 mb-8">
       <h1 className="font-semibold text-2xl text-sadi-blue-500"> {title} </h1>
       <p className="font-normal my-8 text-justify text-sm md:text-sm">
         {" "}

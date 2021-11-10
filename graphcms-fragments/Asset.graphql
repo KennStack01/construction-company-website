@@ -32,8 +32,36 @@ fragment Asset on Asset {
       stage
     }
   }
-  imageBackgroundPageAccueilBanner {
-    ... on PageAccueilBanner {
+  imageBackgroundPageBanner {
+    ... on PageBanner {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  sideImageMissionDescription {
+    ... on MissionDescription {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  headerImageCompanyService {
+    ... on CompanyService {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  clientLogoClientPartenaire {
+    ... on ClientPartenaire {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  imageTeamNotreExperience {
+    ... on NotreExperience {
       remoteTypeName: __typename
       remoteId: id
       stage

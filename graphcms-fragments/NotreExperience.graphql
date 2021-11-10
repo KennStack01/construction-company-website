@@ -5,9 +5,9 @@ fragment NotreExperience on NotreExperience {
   updatedAt
   publishedAt
   greatTitle
+  descriptionDeLExperience
   motDuPresident
   nomDuPresident
-  descriptionDeLExperience
   createdBy {
     ... on User {
       remoteTypeName: __typename

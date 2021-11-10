@@ -24,7 +24,7 @@ const HeroSection = () => {
   return (
     <div className="mt-0 w-full text-white">
       <div className="flex flex-col absolute">
-        <h1 className="text-4xl sm:text-lg md:text-4xl lg:text-7xl  font-bold z-40 mt-14 md:mt-16 ml-3 md:ml-10 md:w-1/3">
+        <h1 className="text-3xl md:text-4xl lg:text-7xl  font-bold z-40 mt-14 md:mt-16 ml-3 md:ml-10 md:w-1/3">
           <ReactTypingEffect
             text={[greatWelcomeText, "Ensemble, nous changeons le monde"]}
             speed={50}
