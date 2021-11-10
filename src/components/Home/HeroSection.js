@@ -21,6 +21,8 @@ const HeroSection = () => {
   const greatWelcomeText = data.graphCmsHomeBanner.greatWelcomeText
   const welcomeTextDescription = data.graphCmsHomeBanner.welcomeTextDescription
 
+  // console.log(data.graphCmsHomeBanner)
+
   return (
     <div className="mt-0 w-full text-white">
       <div className="flex flex-col absolute">

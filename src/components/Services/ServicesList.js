@@ -27,7 +27,7 @@ const ServicesList = () => {
       <h1 className="text-center font-semibold text-2xl md:text-4xl text-gray-700 my-14 md:mt-20">
         Découvrir Nos Services
       </h1>
-      <div className="flex flex-col md:grid grid-cols-3">
+      <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3">
         {allServices.map(service => (
           <Service
             key={service.id}
