@@ -8,6 +8,7 @@ import Mission from "../components/Home/Mission"
 import ServicesList from "../components/Services/ServicesList"
 import ClientsList from "../components/Home/ClientsList"
 import NotreExperience from "../components/Home/NotreExperience"
+import Form from "../components/Contact/Form"
 
 const IndexPage = () => {
   return (
@@ -27,6 +28,9 @@ const IndexPage = () => {
       <ServicesList />
       <ClientsList />
       <NotreExperience />
+      <div>
+        <Form />
+      </div>
     </Layout>
   )
 }

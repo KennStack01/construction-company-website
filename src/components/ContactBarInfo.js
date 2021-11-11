@@ -1,9 +1,22 @@
 import React from "react"
+import { graphql, useStaticQuery, Link } from "gatsby"
+
 import { RiPhoneFill } from "react-icons/ri"
 import { HiOutlineMail } from "react-icons/hi"
 import { AiOutlineFieldTime } from "react-icons/ai"
 
 const ContactBarInfo = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      graphCmsContactInfo {
+        phoneNumber1
+        email1
+      }
+    }
+  `)
+
+  const contact = data.graphCmsContactInfo
+
   return (
     <div className="flex flex-row justify-center bg-white p-2 w-full text-sadi-blue-600 text-xs">
       <div className="flex flex-row mx-2 md:mx-4">
@@ -12,7 +25,7 @@ const ContactBarInfo = () => {
         </div>
         <div className="my-auto flex flex-col">
           <h5 className="">Appelez-nous</h5>
-          <p className="font-semibold">+1 (123) 456-7890</p>
+          <p className="font-semibold">{contact.phoneNumber1}</p>
         </div>
       </div>
       <div className="flex flex-row mx-2 md:mx-4">
@@ -23,7 +36,9 @@ const ContactBarInfo = () => {
         </div>
         <div className="my-auto flex flex-col">
           <h5>Envoyez un e-mail</h5>
-          <p className="font-semibold">info@gmail.com</p>
+          <Link to="/contact" className="font-semibold hover:underline">
+            <p>{contact.email1}</p>
+          </Link>
         </div>
       </div>
       <div className="flex flex-row mx-2 md:mx-4">
