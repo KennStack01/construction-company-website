@@ -25,7 +25,7 @@ const ClientsList = () => {
       <h1 className="text-center font-semibold text-2xl md:text-4xl text-gray-700 my-14 md:mt-20">
         Ils nous font confiance
       </h1>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 place-content-center mx-auto">
         {clients.map(client => (
           <div key={client.id} className="flex flex-col justify-center my-2">
             <img

@@ -7,6 +7,7 @@ import HeroSection from "../components/Home/HeroSection"
 import Mission from "../components/Home/Mission"
 import ServicesList from "../components/Services/ServicesList"
 import ClientsList from "../components/Home/ClientsList"
+import NotreExperience from "../components/Home/NotreExperience"
 
 const IndexPage = () => {
   return (
@@ -25,6 +26,7 @@ const IndexPage = () => {
       <Mission />
       <ServicesList />
       <ClientsList />
+      <NotreExperience />
     </Layout>
   )
 }
