@@ -9,6 +9,7 @@ import ServicesList from "../components/Services/ServicesList"
 import ClientsList from "../components/Home/ClientsList"
 import NotreExperience from "../components/Home/NotreExperience"
 import Form from "../components/Contact/Form"
+import ContactInfo from "../components/Contact/ContactInfo"
 
 const IndexPage = () => {
   return (
@@ -28,8 +29,9 @@ const IndexPage = () => {
       <ServicesList />
       <ClientsList />
       <NotreExperience />
-      <div>
+      <div className="flex flex-col md:flex-row justify-center">
         <Form />
+        <ContactInfo />
       </div>
     </Layout>
   )

@@ -4,45 +4,14 @@ import { BiMailSend } from "react-icons/bi"
 
 const Form = () => {
   return (
-    <div>
+    <div className="md:w-2/3">
       <h1 className="text-2xl font-semibold text-center">Contactez-nous 👇</h1>
-      <div className="w-full bg-white shadow rounded p-8 mx-6 md:m-4 md:w-1/2 md:mx-auto">
+      <div className="bg-white shadow rounded p-8 mx-1 md:m-4 md:w-1/2 md:mx-auto">
         <form
           className="mb-4 md:justify-between"
           method="post"
           action={`https://getform.io/f/1179f6c4-451a-4658-aef8-51f1689df515`}
         >
-          {/* <div className="grid grid-cols-2">
-            <div className="flex flex-col mb-4 text-sm">
-              <label
-                className="mb-2 tracking-wide font-bold text-sm text-gray-800"
-                htmlFor="first_name"
-              >
-                Votre Nom
-              </label>
-              <input
-                className="py-2 px-3 rounded-sm text-gray-800 border focus:outline-none focus:ring-2 focus:ring-sadi-blue-600 focus:ring-opacity-50"
-                type="text"
-                name="first_name"
-                id="first_name"
-                placeholder="Tshilumba Jean-Baptiste"
-                required
-              />
-            </div>
-            <div className="flex flex-col mb-4 text-sm mx-auto">
-              <label className="mb-2 font-bold text-gray-800" htmlFor="email">
-                Votre Adresse e-mail
-              </label>
-              <input
-                className="py-2 px-3 rounded-sm text-gray-800 border focus:outline-none focus:ring-2 focus:ring-sadi-blue-600 focus:ring-opacity-50"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="partenaire@gmail.com"
-                required
-              />
-            </div>
-          </div> */}
           <div className="grid grid-cols-2 w-full">
             <div className="flex flex-col mb-4 text-sm">
               <label
@@ -133,7 +102,7 @@ const Form = () => {
           <div className="mt-10 md:mx-auto">
             <button
               type="submit"
-              className="flex flex-row mx-auto justify-evenly text-white bg-sadi-blue-500 hover:bg-sadi-blue-600 font-bold py-4 md:py-2 px-6 text-xl rounded-md"
+              className="flex flex-row mx-auto justify-evenly text-white bg-sadi-blue-500 hover:bg-sadi-blue-600 font-bold py-3 md:py-2 px-6 text-xl rounded-md"
             >
               <h2 className="my-auto">Envoyez {` `}</h2>
               <BiMailSend className="text-3xl my-auto" />
