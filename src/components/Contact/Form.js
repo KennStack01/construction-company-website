@@ -6,7 +6,7 @@ const Form = () => {
   return (
     <div>
       <h1 className="text-2xl font-semibold text-center">Contactez-nous 👇</h1>
-      <div className="w-full bg-white shadow rounded p-8 m-4 md:w-1/2 md:mx-auto">
+      <div className="w-full bg-white shadow rounded p-8 mx-6 md:m-4 md:w-1/2 md:mx-auto">
         <form
           className="mb-4 md:justify-between"
           method="post"
@@ -124,7 +124,7 @@ const Form = () => {
               name="message"
               id="message"
               className="resize-none p-1 h-36 rounded focus:outline-none border focus:ring-2 focus:ring-sadi-blue-600 focus:ring-opacity-50"
-              placeholder="Décrivez votre message"
+              placeholder="Décrivez votre requête"
               rows="4"
               required
             ></textarea>
