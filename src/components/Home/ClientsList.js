@@ -31,9 +31,9 @@ const ClientsList = () => {
             <img
               src={client.clientLogo.url}
               alt={client.clientCompanyName}
-              className="w-auto h-32 mx-auto md:w-auto md:h-32"
+              className="w-auto h-32 mx-auto md:w-auto md:h-32 filter grayscale"
             />
-            <h5 className="text-gray-800 text-xs mx-auto">
+            <h5 className="text-gray-700 text-md font-semibold mx-auto">
               {" "}
               {client.clientCompanyName}{" "}
             </h5>
