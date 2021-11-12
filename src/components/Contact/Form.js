@@ -76,7 +76,7 @@ const Form = () => {
                 type="text"
                 name="company"
                 id="company"
-                placeholder="Tshilumba Jean-Baptiste"
+                placeholder="Holding Company USA"
                 required
               />
             </div>
