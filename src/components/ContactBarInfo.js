@@ -8,14 +8,18 @@ import { AiOutlineFieldTime } from "react-icons/ai"
 const ContactBarInfo = () => {
   const data = useStaticQuery(graphql`
     query {
-      graphCmsCompanyContactInformation {
-        phoneNumber1
-        email1
+      allGraphCmsContactInfo(limit: 1) {
+        edges {
+          node {
+            phoneNumber1
+            email1
+          }
+        }
       }
     }
   `)
 
-  const contact = data.graphCmsCompanyContactInformation
+  const contactInfo = data.allGraphCmsContactInfo.edges[0].node
 
   return (
     <div className="flex flex-row justify-center bg-white p-2 w-full text-sadi-blue-600 text-xs">
@@ -25,7 +29,7 @@ const ContactBarInfo = () => {
         </div>
         <div className="my-auto flex flex-col">
           <h5 className="">Appelez-nous</h5>
-          <p className="font-semibold">{contact.phoneNumber1}</p>
+          <p className="font-semibold">{contactInfo.phoneNumber1}</p>
         </div>
       </div>
       <div className="flex flex-row mx-2 md:mx-4">
@@ -37,7 +41,7 @@ const ContactBarInfo = () => {
         <div className="my-auto flex flex-col">
           <h5>Envoyez un e-mail</h5>
           <Link to="/contact" className="font-semibold hover:underline">
-            <p>{contact.email1}</p>
+            <p>{contactInfo.email1}</p>
           </Link>
         </div>
       </div>
