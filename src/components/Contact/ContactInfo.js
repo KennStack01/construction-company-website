@@ -4,7 +4,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 const ContactInfo = () => {
   const data = useStaticQuery(graphql`
     query MyQuery {
-      allGraphCmsContactInfo(limit: 1) {
+      allGraphCmsCompanyContactInformation(limit: 1) {
         edges {
           node {
             phoneNumber1
@@ -17,7 +17,7 @@ const ContactInfo = () => {
     }
   `)
 
-  const contactData = data.allGraphCmsContactInfo.edges[0].node
+  const contactData = data.allGraphCmsCompanyContactInformation.edges[0].node
 
   return (
     <div className="md:w-1/3 my-10 md:my-24 bg-sadi-blue-600 text-white p-2 md:p-5 rounded-sm">

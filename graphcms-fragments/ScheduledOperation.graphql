@@ -58,11 +58,6 @@ fragment ScheduledOperation on ScheduledOperation {
       remoteId: id
       stage
     }
-    ... on ContactInfo {
-      remoteTypeName: __typename
-      remoteId: id
-      stage
-    }
     ... on HomeBanner {
       remoteTypeName: __typename
       remoteId: id
