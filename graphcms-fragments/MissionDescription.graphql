@@ -35,4 +35,11 @@ fragment MissionDescription on MissionDescription {
       stage
     }
   }
+  scheduledIn {
+    ... on ScheduledOperation {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
 }

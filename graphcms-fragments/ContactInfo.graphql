@@ -33,4 +33,11 @@ fragment ContactInfo on ContactInfo {
       stage
     }
   }
+  scheduledIn {
+    ... on ScheduledOperation {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
 }

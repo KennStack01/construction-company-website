@@ -35,4 +35,11 @@ fragment HomeBanner on HomeBanner {
       stage
     }
   }
+  scheduledIn {
+    ... on ScheduledOperation {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
 }

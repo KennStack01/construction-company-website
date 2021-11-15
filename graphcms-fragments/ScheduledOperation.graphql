@@ -48,6 +48,11 @@ fragment ScheduledOperation on ScheduledOperation {
       remoteId: id
       stage
     }
+    ... on CompanyContactInformation {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
     ... on CompanyService {
       remoteTypeName: __typename
       remoteId: id

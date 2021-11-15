@@ -45,7 +45,7 @@ const ContactInfo = () => {
             href={`mailto:${data.graphCmsContactInfo.email1}`}
             className="bg-sadi-blue-400 hover:underline p-2 rounded-sm font-semibold mx-auto"
           >
-            Nous écrire
+            Entrez en Contact
           </a>
         </div>
       </div>
